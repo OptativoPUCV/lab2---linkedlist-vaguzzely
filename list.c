@@ -81,7 +81,7 @@ void * prevList(List * list)
   (list -> current -> prev) = (list -> current);
   (list -> current) = NULL;
   free(list -> current);
-  if ((list -> current -> prev) == NULL)
+  if ((list -> current) == NULL)
   {
     return NULL;
   }
