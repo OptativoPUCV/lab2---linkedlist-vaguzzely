@@ -652,3 +652,9 @@ list.c:125:32: error: expected expression before ‘=’ token
 cc1: all warnings being treated as errors
 Compilation failed
 f6f608b
+Sat 25 Mar 2023 09:45:58 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  12|0
+total_score: 70/70
+6744413

@@ -122,7 +122,7 @@ void pushCurrent(List * list, void * data)
       (list -> current) = nuevoNodo;
       (list -> tail) = nuevoNodo;
     }
-    (list -> current -> next)) = nuevoNodo;
+    (list -> current -> next) = nuevoNodo;
     (nuevoNodo -> prev) = (list -> current);
     (list -> head -> next) = nuevoNodo;
   } 
