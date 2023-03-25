@@ -42,7 +42,7 @@ List * createList()
 void * firstList(List * list)
 {
   (list->current) = (list->head);
-  if (list == NULL)
+  if (list->head == NULL)
   {
     return NULL;
   }
