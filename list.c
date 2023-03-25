@@ -120,9 +120,10 @@ void * popCurrent(List * list)
     (list -> head) = (list -> current);
     return datoEliminado;
   }
-  (list -> current) = (list -> current -> next);
-  (list -> current -> prev) = NULL;
-  free (list -> current -> prev);
+  (list-> current -> prev -> next) = (list-> current -> next);
+  (list -> current -> next -> prev) = (list -> current->prev);
+  (list -> current) = NULL;
+  free (list->current);
   return datoEliminado;
 }
 
