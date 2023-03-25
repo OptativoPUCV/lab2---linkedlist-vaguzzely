@@ -322,3 +322,8 @@ list.c:81:23: error: ‘Node’ has no member named ‘head’
       |                       ^~
 Compilation failed
 536b5ea
+Sat 25 Mar 2023 09:05:43 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+bda8cf8
