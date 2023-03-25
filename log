@@ -55,3 +55,12 @@ Sat 25 Mar 2023 04:04:29 PM UTC:
  tests:  1|5
 total_score: 10/70
 5bebf02
+Sat 25 Mar 2023 04:16:27 PM UTC: 
+ list.c | 10 +++++++---
+ 1 file changed, 7 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+list.c:42:1: error: expected identifier or ‘(’ before ‘void’
+   42 | void * firstList(List * lista)
+      | ^~~~
+Compilation failed
+6626892
