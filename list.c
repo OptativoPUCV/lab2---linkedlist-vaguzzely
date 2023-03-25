@@ -77,10 +77,11 @@ void * lastList(List * list)
 
 void * prevList(List * list) 
 {
-  (list -> current) = (list -> current -> prev);
-  (list -> current -> prev) = NULL;
-  free(list -> current -> prev);
-  if (list -> current == NULL)
+  
+  (list -> current -> prev) = (list -> current);
+  (list -> current) = NULL;
+  free(list -> current);
+  if ((list -> current -> prev) == NULL)
   {
     return NULL;
   }
