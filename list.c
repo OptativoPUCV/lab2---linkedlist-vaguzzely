@@ -116,8 +116,9 @@ void pushCurrent(List * list, void * data)
     (list -> head -> next) = nuevoNodo;
   } 
   (nuevoNodo -> next) = (list-> current -> next);
-  (list -> current -> prev) = (list -> current -> prev);
-  (list -> current) = NULL;
+    list->current->next->prev = nuevoNodo;
+    list->current->next = nuevoNodo;
+    nuevoNodo->prev = list->current;
   return pushCurrent;
 }/*tail y normalito*/
 
