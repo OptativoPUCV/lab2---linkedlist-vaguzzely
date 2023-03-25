@@ -349,3 +349,41 @@ Sat 25 Mar 2023 09:09:06 PM UTC:
  tests:  10|2
 total_score: 50/70
 c812c21
+Sat 25 Mar 2023 09:30:17 PM UTC: 
+ list.c | 31 +++++++++++++++++++++++++++----
+ 1 file changed, 27 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:102:22: error: statement with no effect [-Werror=unused-value]
+  102 |     (list -> current -> next)) = nuevoNodo;
+      |     ~~~~~~~~~~~~~~~~~^~~~~~~~
+list.c:102:30: error: expected ‘;’ before ‘)’ token
+  102 |     (list -> current -> next)) = nuevoNodo;
+      |                              ^
+      |                              ;
+list.c:102:30: error: expected statement before ‘)’ token
+list.c:102:32: error: expected expression before ‘=’ token
+  102 |     (list -> current -> next)) = nuevoNodo;
+      |                                ^
+list.c:114:22: error: statement with no effect [-Werror=unused-value]
+  114 |     (list -> current -> next)) = nuevoNodo;
+      |     ~~~~~~~~~~~~~~~~~^~~~~~~~
+list.c:114:30: error: expected ‘;’ before ‘)’ token
+  114 |     (list -> current -> next)) = nuevoNodo;
+      |                              ^
+      |                              ;
+list.c:114:30: error: expected statement before ‘)’ token
+list.c:114:32: error: expected expression before ‘=’ token
+  114 |     (list -> current -> next)) = nuevoNodo;
+      |                                ^
+list.c:122:10: error: ‘datoEliminado’ undeclared (first use in this function)
+  122 |   return datoEliminado;
+      |          ^~~~~~~~~~~~~
+list.c:122:10: note: each undeclared identifier is reported only once for each function it appears in
+list.c:122:10: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+list.c:97:6: note: declared here
+   97 | void pushCurrent(List * list, void * data)
+      |      ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+21b3f8f

@@ -61,9 +61,6 @@ void * nextList(List * list)
   }
   return (list -> current -> data);//*pasando todos los casos se retorna
 }
-/* Programe las funciones `void * lastList(List * list)` y `void * prevList(List * list)`.
-   * La primera retorna el dato del último elemento en la lista y actualiza el current al nodo correspondiente. 
-   * La segunda función retorna el dato del nodo anterior a current y actualiza el current para que apunte a ese nodo.*/
 
 void * lastList(List * list) 
 {
@@ -96,8 +93,34 @@ void pushBack(List * list, void * data) {
     list->current = list->tail;
     pushCurrent(list,data);
 }
-
-void pushCurrent(List * list, void * data) {
+/* Programe la función `void pushCurrent(List * list, void* data)`, la cual agrega un dato a continuación del nodo apuntado por `list->current`.*/
+void pushCurrent(List * list, void * data)
+{
+  Node * nuevoNodo= createNode(data);
+  if ((list -> current -> next) == NULL) /*tail*/
+  {
+    (list -> current -> next)) = nuevoNodo;
+    (nuevoNodo -> prev) = (list -> current);
+    (list -> tail) = nuevoNodo;
+  }
+  if ((list -> current) == (list -> head)) /*head*/
+  {
+    if ((list -> head) == NULL)
+    {
+      (list -> head) = nuevoNodo;
+      (list -> current) = nuevoNodo;
+      (list -> tail) = nuevoNodo;
+    }
+    (list -> current -> next)) = nuevoNodo;
+    (nuevoNodo -> prev) = (list -> current);
+    (list -> head -> next) = nuevoNodo;
+  } 
+  (list-> current -> next) = nuevoNodo;
+  (list -> current -> next -> prev) = (list -> current->prev);
+  (list -> current) = NULL;
+  free (list->current);
+  return datoEliminado;
+  
 }/*tail y normalito*/
 
 void * popFront(List * list) {
