@@ -258,3 +258,21 @@ Sat 25 Mar 2023 08:49:42 PM UTC:
  tests:  7|3
 total_score: 40/70
 02bdfd3
+Sat 25 Mar 2023 08:53:55 PM UTC: 
+ list.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘prevList’:
+list.c:80:22: error: expected expression before ‘==’ token
+   80 |   if (list->current) == NULL || (list->current->prev) == NULL)
+      |                      ^~
+list.c:80:3: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   80 |   if (list->current) == NULL || (list->current->prev) == NULL)
+      |   ^~
+list.c:80:62: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   80 |   if (list->current) == NULL || (list->current->prev) == NULL)
+      |                                                              ^
+list.c:80:62: error: expected statement before ‘)’ token
+cc1: all warnings being treated as errors
+Compilation failed
+db6142c
