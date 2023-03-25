@@ -67,24 +67,23 @@ void * nextList(List * list)
 
 void * lastList(List * list) 
 {
-  if ((list -> tail) == NULL) 
+  (list -> current) = (list -> tail);
+  if (list -> tail == NULL)
   {
-    (list -> current) = NULL;
     return NULL;
   }
-  (list -> current) = (list -> tail);
   return (list -> current -> data);
-}
+  }
 
 void * prevList(List * list) 
 {
-  if ((list->current) == NULL)
+  (list -> current) = (list -> current -> prev);
+  if (list -> current -> head == NULL)
   {
     return NULL;
   }
-  if (list->current->prev) == NULL){
-  (list->current) = (list->current->prev);
-  return (list->current->data);}
+  return (list -> current -> data);
+  
 }
 
 void pushFront(List * list, void * data) {

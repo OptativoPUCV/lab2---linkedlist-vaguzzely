@@ -312,3 +312,13 @@ list.c:85:35: error: expected statement before ‘)’ token
 cc1: all warnings being treated as errors
 Compilation failed
 599a5a4
+Sat 25 Mar 2023 09:05:22 PM UTC: 
+ list.c | 13 ++++++-------
+ 1 file changed, 6 insertions(+), 7 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘prevList’:
+list.c:81:23: error: ‘Node’ has no member named ‘head’
+   81 |   if (list -> current -> head == NULL)
+      |                       ^~
+Compilation failed
+536b5ea
