@@ -68,6 +68,8 @@ void * nextList(List * list)
 void * lastList(List * list) 
 {
   (list -> current) = (list -> tail);
+  (list -> tail) = NULL;
+  free(list -> tail);
   if (list -> tail == NULL)
   {
     return NULL;
@@ -78,6 +80,8 @@ void * lastList(List * list)
 void * prevList(List * list) 
 {
   (list -> current) = (list -> current -> prev);
+  (list -> current -> prev) = NULL;
+  free(list -> current -> prev);
   if (list -> current == NULL)
   {
     return NULL;
