@@ -423,3 +423,39 @@ list.c:97:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 f6e2153
+Sat 25 Mar 2023 09:32:48 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:102:22: error: statement with no effect [-Werror=unused-value]
+  102 |     (list -> current -> next)) = nuevoNodo;
+      |     ~~~~~~~~~~~~~~~~~^~~~~~~~
+list.c:102:30: error: expected ‘;’ before ‘)’ token
+  102 |     (list -> current -> next)) = nuevoNodo;
+      |                              ^
+      |                              ;
+list.c:102:30: error: expected statement before ‘)’ token
+list.c:102:32: error: expected expression before ‘=’ token
+  102 |     (list -> current -> next)) = nuevoNodo;
+      |                                ^
+list.c:114:22: error: statement with no effect [-Werror=unused-value]
+  114 |     (list -> current -> next)) = nuevoNodo;
+      |     ~~~~~~~~~~~~~~~~~^~~~~~~~
+list.c:114:30: error: expected ‘;’ before ‘)’ token
+  114 |     (list -> current -> next)) = nuevoNodo;
+      |                              ^
+      |                              ;
+list.c:114:30: error: expected statement before ‘)’ token
+list.c:114:32: error: expected expression before ‘=’ token
+  114 |     (list -> current -> next)) = nuevoNodo;
+      |                                ^
+list.c:122:10: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+  122 |   return 0;
+      |          ^
+list.c:97:6: note: declared here
+   97 | void pushCurrent(List * list, void * data)
+      |      ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+246cb0f
