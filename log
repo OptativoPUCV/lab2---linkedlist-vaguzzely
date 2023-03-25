@@ -633,3 +633,22 @@ list.c:125:32: error: expected expression before ‘=’ token
 cc1: all warnings being treated as errors
 Compilation failed
 cf3d9ff
+Sat 25 Mar 2023 09:45:43 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:125:22: error: statement with no effect [-Werror=unused-value]
+  125 |     (list -> current -> next)) = nuevoNodo;
+      |     ~~~~~~~~~~~~~~~~~^~~~~~~~
+list.c:125:30: error: expected ‘;’ before ‘)’ token
+  125 |     (list -> current -> next)) = nuevoNodo;
+      |                              ^
+      |                              ;
+list.c:125:30: error: expected statement before ‘)’ token
+list.c:125:32: error: expected expression before ‘=’ token
+  125 |     (list -> current -> next)) = nuevoNodo;
+      |                                ^
+cc1: all warnings being treated as errors
+Compilation failed
+f6f608b
