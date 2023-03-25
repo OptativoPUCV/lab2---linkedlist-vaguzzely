@@ -73,3 +73,12 @@ list.c:42:1: error: expected identifier or ‘(’ before ‘void’
       | ^~~~
 Compilation failed
 a8bb5e8
+Sat 25 Mar 2023 04:19:52 PM UTC: 
+ list.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+In file included from test.c:5:
+list.c:42:1: error: expected identifier or ‘(’ before ‘void’
+   42 | void * firstList(List * lista)
+      | ^~~~
+Compilation failed
+7d1809c
