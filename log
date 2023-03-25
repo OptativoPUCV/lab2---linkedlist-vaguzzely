@@ -294,3 +294,21 @@ list.c:81:62: error: expected statement before ‘)’ token
 cc1: all warnings being treated as errors
 Compilation failed
 30d45a4
+Sat 25 Mar 2023 08:58:11 PM UTC: 
+ list.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘prevList’:
+list.c:85:28: error: expected expression before ‘==’ token
+   85 |   if (list->current->prev) == NULL){
+      |                            ^~
+list.c:85:3: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   85 |   if (list->current->prev) == NULL){
+      |   ^~
+list.c:85:35: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   85 |   if (list->current->prev) == NULL){
+      |                                   ^
+list.c:85:35: error: expected statement before ‘)’ token
+cc1: all warnings being treated as errors
+Compilation failed
+599a5a4
