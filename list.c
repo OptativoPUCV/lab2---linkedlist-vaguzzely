@@ -47,20 +47,19 @@ void * firstList(List * list)
   return (list -> current -> data);
 }
 
-//*La segunda función retorna el dato del nodo a continuación //*del current y actualiza el current para que apunte a ese nodo.
 
 void * nextList(List * list) 
 {
-  if (list -> current == NULL)
+  if (list -> current == NULL) //*por si la lista está vacía
   {
     return NULL;
   }
   (list -> current) = (list -> current -> next);
-  if (list -> current == NULL)
+  if (list -> current == NULL)//*para ver si está en el últimmo elemento (ya que estaría apuntanto a la nada)
   {
     return NULL;
   }
-  return (list -> current -> data);
+  return (list -> current -> data);//*pasando todos los casos se retorna
 }
 
 
