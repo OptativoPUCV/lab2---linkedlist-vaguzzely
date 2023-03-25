@@ -72,7 +72,7 @@ void * prevList(List * list) {
 }
 
 void pushFront(List * list, void * data) {
-}
+}/* antes del head*/
 
 void pushBack(List * list, void * data) {
     list->current = list->tail;
@@ -80,7 +80,7 @@ void pushBack(List * list, void * data) {
 }
 
 void pushCurrent(List * list, void * data) {
-}
+}/*tail y normalito*/
 
 void * popFront(List * list) {
     list->current = list->head;
@@ -91,10 +91,8 @@ void * popBack(List * list) {
     list->current = list->tail;
     return popCurrent(list);
 }
-/*6. Programe la función `void* popCurrent(List * list)`, la cual elimina el nodo que está en la posición del current de la lista enlazada, y además retorna el **dato** del nodo eliminado.
-> **Nota**: El current debe quedar apuntando al nodo siguiente del eliminado.
 
-Las funciones `pushBack`, `popFront` y `popBack` se pueden implementar usando `popCurrent` y `pushCurrent` (búsquelas en el código).    head, null, tail, normalito   */
+
 void * popCurrent(List * list)
 {
   void * datoEliminado;
